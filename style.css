@@ -5,16 +5,137 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-image: url(./Images/Boden.jpg);
+    background-size: cover;
+    background-position: center;
+    
 }
 body{
-    background-color: #dc143c;
-    width: 100vw;
-    height: 100vh;
+    position: relative;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 10vw 90vw;
+    grid-template-rows: 20vh repeat(20, 80vh) 20%;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 h1{
-    font-size: 10rem;
+    font-size: 5rem;
     text-align: center;
-    margin-top: 20vh;
-    color: #deb887;
+    color: rgb(255, 0, 0);
 }
+.header{
+    grid-area: header;
+    background-color: rgba(211, 249, 249, 0.77);
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+.header > ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10vw 0 10vw;
+}
+.header > ul > li{
+    list-style-type: none;
+
+}
+.header > ul > li > a{
+    display: flex;
+    font-size: 3rem;
+    text-decoration: none;
+    color: #dc143c;
+}
+.aside{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(211, 249, 249, 0.77);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.main > div{
+    width: 90%;
+    height: 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.baerlauch{
+    display: flex;
+    justify-content: center;
+    background-image: url(./Images/Baerlauch.jpg);
+}
+.basilikum{
+    background-image: url(./Images/basilikum.jpg);
+}
+.beifuss{
+    background-image: url(./Images/beifuss.jpg);
+}
+.dill{
+    background-image: url(./Images/dill.jpg);
+}
+.estragon{
+    background-image: url(./Images/estragon.jpg);
+}
+.kerbel{
+    background-image: url(./Images/Kerbel.jpg);
+}
+.koriander{
+    background-image: url(./Images/koriander.jpg);
+}
+.kresse{
+    background-image: url(./Images/Kresse.jpg);
+}
+.liebstoeckel{
+    background-image: url(./Images/Liebstöckel.jpg);
+}
+.lorbeer{
+    background-image: url(./Images/lorbeer.jpg);
+}
+.majoran{
+    background-image: url(./Images/majoran.jpg);
+}
+.melisse{
+    background-image: url(./Images/melisse.jpg);
+}
+.minze{
+    background-image: url(./Images/Minze.jpg);
+}
+.oregano{
+    background-image: url(./Images/oregano.jpg);
+}
+.petersilie{
+    background-image: url(./Images/petersilie.jpg);
+}
+.rosmarin{
+    background-image: url(./Images/rosmarin.jpg);
+}
+.salbei{
+    background-image: url(./Images/salbei.jpg);
+}
+.schnittlauch{
+    background-image: url(./Images/schnittlauch.jpg);
+}
+.thymian{
+    background-image: url(./Images/thymian.jpg);
+}
+.ysop{
+    background-image: url(./Images/ysop.jpg);
+}
+.aside > a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #dc143c;
+    padding: 0.3rem;
+    margin: auto 0 auto 0;
+
+}
+
+p{
+    font-size: 3rem;
+    margin: 0;
+}
+
+
+
