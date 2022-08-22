@@ -8,22 +8,28 @@ html{
     background-image: url(./Images/Boden02.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     
 }
+
 body{
     margin: 0;
     max-width: 100vw;
     max-height: 100vh;
+    position: relative;
 }
 .container{
     display: grid;
     grid-template-columns: 10vw 10vw 70vw 10vw;
-    grid-template-rows: 20vh 10vh 60vh 10vh 10vh repeat(18, 60vh 10vh 10vh) 60vh 10vh 20vh;
+    grid-template-rows: 20vh 10vh 60vh 10vh 10vh 10vh repeat(18, 60vh 10vh 10vh 10vh) 60vh 10vh 20vh;
 }
 h1{
-    font-size: 5rem;
+    font-size: 6rem;
     text-align: center;
     color: rgb(255, 0, 0);
+    margin: 1.5rem 0 0 0;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 1rem;
 }
 .header{
     grid-area: header;
@@ -31,12 +37,12 @@ h1{
     grid-column: 2 / 5;
     grid-row: 1 / 2;
     border: 1px solid red;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem 1rem 1rem 1rem;
 }
 .header > ul{
     display: flex;
     justify-content: space-around;
-    margin: 1vh 10vw 0 10vw;
+    margin: 3vh 10vw 0 10vw;
 }
 .header > ul > li{
     list-style-type: none;
@@ -58,11 +64,19 @@ div{
 .aside{
     background-color: rgba(211, 249, 249, 0.77);
     grid-column: 1 / 2;
-    grid-row: 2 / 4;
+    grid-row: 1 / 5;
     display: flex;
     flex-direction: column;
     border: 1px solid red;
     border-radius: 0 1rem 1rem 0;
+    padding: 2rem 0 2rem 1.5rem;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 89.2vw;
+    left: 0vw;
+
+
 
 }
 
@@ -70,328 +84,397 @@ div{
     font-size: 2rem;
     text-decoration: none;
     color: #dc143c;
-    padding: 0.5rem;
-    margin: auto 0 auto 0;
+    margin: auto 0 auto 0.5rem;
     overflow: hidden;
 }
+.kraut{
+    transition: all 4s;
+    border-radius: 3rem;
+}
+.kraut:hover{
+    opacity: 0.1;
+}
+.text{
+    background-color: rgba(211, 249, 249);
+    z-index: -1;
+    font-size: 2rem;
+    border-radius: 3rem;
+}
 
+.baerlauch-h2{
+    background-image: url(./Images/holz.jpg); 
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
 .baerlauch{
     background-image: url(./Images/Baerlauch.jpg);
     grid-column: 3 / 4;
     grid-row: 3 / 4;
-    display: flex;
-    align-items: flex-end;
-
+}
+.a01{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+.baerlauch-home{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+.basilikum-h2{
+    background-image: url(./Images/holz.jpg);
+    grid-column: 3 / 4;
+    grid-row: 6 / 7;
 }
 .basilikum{
     background-image: url(./Images/basilikum.jpg);
     grid-column: 3 / 4;
-    grid-row: 6 / 7;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 7 / 8;
+}
+.a02{
+    grid-column: 3 / 4;
+    grid-row: 7 / 8;
+}
+.basilikum-home{
+    grid-column: 2 / 3;
+    grid-row: 8 / 9;
 }
 .beifuss{
     background-image: url(./Images/beifuss.jpg);
     grid-column: 3 / 4;
-    grid-row: 9 / 10;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 11 / 12;
+}
+.a03{
+    grid-column: 3 / 4;
+    grid-row: 11 / 12;
+}
+.beifuss-home{
+    grid-column: 2 / 3;
+    grid-row: 12 / 13;
 }   
 .dill{
     background-image: url(./Images/dill.jpg);
     grid-column: 3 / 4;
-    grid-row: 12 / 13;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 15 / 16;   
+}
+.a04{
+    grid-column: 3 / 4;
+    grid-row: 15 / 16;
+}
+.dill-home{
+    grid-column: 2 / 3;
+    grid-row: 16 / 17;
 }
 .estragon{
     background-image: url(./Images/estragon.jpg);
     grid-column: 3 / 4;
-    grid-row: 15 / 16;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 19 / 20;
+}
+.a05{
+    grid-column: 3 / 4;
+    grid-row: 19 / 20;
+}
+.estragon-home{
+    grid-column: 2 / 3;
+    grid-row: 20 /21;
 }
 .kerbel{
     background-image: url(./Images/Kerbel.jpg);
     grid-column: 3 / 4;
-    grid-row: 18 / 19;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 23 / 24;
+}
+.a06{
+    grid-column: 3 / 4;
+    grid-row: 23 / 24;
+}
+.kerbel-home{
+    grid-column: 2 / 3;
+    grid-row: 24 /25;
 }
 .koriander{
     background-image: url(./Images/koriander.jpg);
     grid-column: 3 / 4;
-    grid-row: 21 / 22;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 27/ 28;
+}
+.a07{
+    grid-column: 3 / 4;
+    grid-row: 27/ 28;
+}
+.koriander-home{
+    grid-column: 2 / 3;
+    grid-row: 28 /29;
 }
 .kresse{
     background-image: url(./Images/Kresse.jpg);
     grid-column: 3 / 4;
-    grid-row: 24 / 25;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 31 / 32;
+}
+.a08{
+    grid-column: 3 / 4;
+    grid-row: 31 / 32;
+}
+.kresse-home{
+    grid-column: 2 / 3;
+    grid-row: 32 /33;
 }
 .liebstoeckel{
     background-image: url(./Images/Liebstöckel.jpg);
     grid-column: 3 / 4;
-    grid-row: 27 / 28;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 35 / 36;
+}
+.a09{
+    grid-column: 3 / 4;
+    grid-row: 35 / 36;
+}
+.liebstoeckel-home{
+    grid-column: 2 / 3;
+    grid-row: 36 /37;
 }
 .lorbeer{
     background-image: url(./Images/lorbeer.jpg);
     grid-column: 3 / 4;
-    grid-row: 30 / 31;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 39 / 40;
+}
+.a10{
+    grid-column: 3 / 4;
+    grid-row: 39 / 40;
+}
+.lorbeer-home{
+    grid-column: 2 / 3;
+    grid-row: 40 /41;
 }
 .majoran{
     background-image: url(./Images/majoran.jpg);
     grid-column: 3 / 4;
-    grid-row: 33 / 34;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 43 / 44;
+}
+.a11{
+    grid-column: 3 / 4;
+    grid-row: 43 / 44;
+}
+.majoran-home{
+    grid-column: 2 / 3;
+    grid-row: 44 /45;
 }
 .melisse{
     background-image: url(./Images/melisse.jpg);
     grid-column: 3 / 4;
-    grid-row: 36 / 37;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 47 / 48;
+}
+.a12{
+    grid-column: 3 / 4;
+    grid-row: 47 / 48;
+}
+.melisse-home{
+    grid-column: 2 / 3;
+    grid-row: 48 /49;
 }
 .minze{
     background-image: url(./Images/Minze.jpg);
     grid-column: 3 / 4;
-    grid-row: 39 / 40;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 51 / 52;
+}
+.a13{
+    grid-column: 3 / 4;
+    grid-row: 51 / 52;
+}
+.minze-home{
+    grid-column: 2 / 3;
+    grid-row: 52 /53;
 }
 .oregano{
     background-image: url(./Images/oregano.jpg);
     grid-column: 3 / 4;
-    grid-row: 42 / 43;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 55 / 56;
+}
+.a14{
+    grid-column: 3 / 4;
+    grid-row: 55 / 56;
+}
+.oregano-home{
+    grid-column: 2 / 3;
+    grid-row: 56 /57;
 }
 .petersilie{
     background-image: url(./Images/petersilie.jpg);
     grid-column: 3 / 4;
-    grid-row: 45 / 46;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 59 / 60;
+}
+.a15{
+    grid-column: 3 / 4;
+    grid-row: 59 / 60;
+}
+.petersilie-home{
+    grid-column: 2 / 3;
+    grid-row: 60 /61;
 }
 .rosmarin{
     background-image: url(./Images/rosmarin.jpg);
     grid-column: 3 / 4;
-    grid-row: 48 / 49;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 63 / 64;
+}
+.a16{
+    grid-column: 3 / 4;
+    grid-row: 63 / 64;
+}
+.rosmarin-home{
+    grid-column: 2 / 3;
+    grid-row: 64 /65;
 }
 .salbei{
     background-image: url(./Images/salbei.jpg);
     grid-column: 3 / 4;
-    grid-row: 51 / 52;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 67 / 68;
+}
+.a17{
+    grid-column: 3 / 4;
+    grid-row: 67 / 68;
+}
+.salbei-home{font-family: 'Permanent Marker', cursive;
+    grid-column: 2 / 3;
+    grid-row: 68 /69;
 }
 .schnittlauch{
     background-image: url(./Images/schnittlauch.jpg);
     grid-column: 3 / 4;
-    grid-row: 54 / 55;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 71 / 72;
+}
+.a18{
+    grid-column: 3 / 4;
+    grid-row: 71 / 72;
+}
+.schnittlauch-home{
+    grid-column: 2 / 3;
+    grid-row: 72 /73;
 }
 .thymian{
     background-image: url(./Images/thymian.jpg);
     grid-column: 3 / 4;
-    grid-row: 57 / 58;
-    display: flex;
-    align-items: flex-end;
+    grid-row: 75 / 76;
+}
+.a19{
+    grid-column: 3 / 4;
+    grid-row: 75 / 76;
+}
+.thymian-home{
+    grid-column: 2 / 3;
+    grid-row: 76 /77;
 }
 .ysop{
     background-image: url(./Images/ysop.jpg);
     grid-column: 3 / 4;
-    grid-row: 60 / 61;
+    grid-row: 79 / 80;
+}
+.a20{
+    grid-column: 3 / 4;
+    grid-row: 79 / 80;
+}
+.ysop-home{
+    grid-column: 2 / 3;
+    grid-row: 80 / 81;
+}
+.holz{
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    opacity: 0.8;
 }
 .footer{
     background-color: rgba(211, 249, 249, 0.77);
     grid-column: 1 / 5;
-    grid-row: 62 / 63;
+    grid-row: 81 / 82;
 }
-.bearlauch-h2{
-    background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-}
-.basilikum-h2{
-    background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 5 / 6;
-}
+
 .beifuss-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
-    grid-row: 8 / 9;
+    grid-row: 10 / 11;
 }
 .dill-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 11 / 12;
-}
-.estragon-h2{
-    background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
     grid-row: 14 / 15;
 }
+.estragon-h2{
+    background-image: url(./Images/holz.jpg);
+    grid-column: 3 / 4;
+    grid-row: 18 / 19;
+}
 .kerbel-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
-    grid-row: 17 / 18;
+    grid-row: 22 / 23;
 }
 .koriander-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 20 / 21;
-}
-.kresse-h2{
-    background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 23 / 24;
-}
-.liebstoeckel-h2{
-    background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
     grid-row: 26 / 27;
 }
+.kresse-h2{
+    background-image: url(./Images/holz.jpg);
+    grid-column: 3 / 4;
+    grid-row: 30 / 31;
+}
+.liebstoeckel-h2{
+    background-image: url(./Images/holz.jpg);
+    grid-column: 3 / 4;
+    grid-row: 34 / 35;
+}
 .lorbeer-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 29 / 30;
-}
-.majoran-h2{
-    background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 32 / 33;
-}
-.melisse-h2{
-    background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 35 / 36;
-}
-.minze-h2{
-    background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
     grid-row: 38 / 39;
 }
-.oregano-h2{
+.majoran-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
-    grid-row: 41 / 42;
+    grid-row: 42 / 43;
 }
-.petersilie-h2{
+.melisse-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
-    grid-row: 44 / 45;
+    grid-row: 46 / 47;
 }
-.rosmarin-h2{
+.minze-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3 / 4;
-    grid-row: 47 / 48;
-}
-.salbei-h2{
-    background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
     grid-row: 50 / 51;
 }
+.oregano-h2{
+    background-image: url(./Images/holz.jpg);
+    grid-column: 3 / 4;
+    grid-row: 54 / 55;
+}
+.petersilie-h2{
+    background-image: url(./Images/holz.jpg);
+    grid-column: 3 / 4;
+    grid-row: 58 / 59;
+}
+.rosmarin-h2{
+    background-image: url(./Images/holz.jpg);
+    grid-column: 3 / 4;
+    grid-row: 62 / 63;
+}
+.salbei-h2{
+    background-image: url(./Images/holz.jpg);
+    grid-column: 3 / 4;
+    grid-row: 66 / 67;
+}
 .schnittlauch-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
-    grid-row: 53 / 54;
+    grid-row: 70 / 71;
 }
 .thymian-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
-    grid-row: 56 / 57;
+    grid-row: 74 / 75;
 }
 .ysop-h2{
     background-image: url(./Images/holz.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / 4;
-    grid-row: 59 / 60;
+    grid-row: 78 / 79;
 }
-.home{
-    background-image: url(./Images/granit.jpeg);
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-    grid-row: 7 / 8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem 1rem 1rem 0;
-    border: 1px solid red;
-}
+
 div > a >i{
     font-size: 7rem;
     color: rgb(88, 45, 2);
@@ -400,14 +483,44 @@ div > a >i{
 
 p{
     font-size: 2rem;
-    margin: 0;
 }
 h2{
-    font-size: 4.5rem;
+    font-size: 7rem;
     font-weight: bolder;
-    background-color: #dc143c;
+    letter-spacing: 1.5rem;
+    font-family: 'Itim', cursive;
+    color: #302a2a;
+}
+.myButton > i{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
+.myButton {
+    width: 100%;
+    height: 100%;
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
 
 
 
