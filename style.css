@@ -488,6 +488,10 @@ h2 {
   font-family: "Itim", cursive;
   color: #302a2a;
 }
+footer > p{
+  font-size: 3rem;
+  text-align: center;
+}
 .myButton > i {
   display: flex;
   justify-content: center;
